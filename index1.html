@@ -1473,7 +1473,21 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+<div id="loginOverlay">
+  <div class="loginPopup">
+    <button class="closeBtn" id="closeBtn" onclick="closeByButton()">×</button>
 
+    <h2>Welcome</h2>
+    <p class="subtitle">Please login to continue</p>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="loginBtn" onclick="handleLogin()">Login</button>
+
+    <p id="timerText">Popup closes in 2:00</p>
+  </div>
+</div>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1490,3 +1504,5 @@
 </body>
 
 </html>
+
+

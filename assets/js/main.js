@@ -223,3 +223,82 @@
         }
       }
     })
+
+    const overlay = document.getElementById("loginOverlay");
+const timerText = document.getElementById("timerText");
+const closeBtn = document.getElementById("closeBtn");
+
+let timeLeft;
+let countdown;
+let popupTimeout;
+let loggedIn = false;
+
+// Initial popup after 8 seconds
+window.addEventListener("load", () => {
+  setTimeout(showPopup, 8000);
+});
+
+function showPopup() {
+  if (loggedIn) return;
+
+  overlay.style.display = "flex";
+  overlay.classList.remove("fade-out");
+  document.body.classList.add("popup-active");
+
+  closeBtn.disabled = true;
+  setTimeout(() => closeBtn.disabled = false, 4000);
+
+  startTimer();
+}
+
+function startTimer() {
+  timeLeft = 120;
+  clearInterval(countdown);
+
+  countdown = setInterval(() => {
+    timeLeft--;
+
+    const m = Math.floor(timeLeft / 60);
+    const s = String(timeLeft % 60).padStart(2, "0");
+    timerText.textContent = `Popup closes in ${m}:${s}`;
+
+    if (timeLeft <= 0) {
+      closePopup(false);
+    }
+  }, 1000);
+}
+
+function closePopup(shouldReopen) {
+  clearInterval(countdown);
+  overlay.classList.add("fade-out");
+  document.body.classList.remove("popup-active");
+
+  setTimeout(() => {
+    overlay.style.display = "none";
+  }, 400);
+
+  // 🔁 Reopen after 60s ONLY if closed via ✕
+  if (shouldReopen && !loggedIn) {
+    clearTimeout(popupTimeout);
+    popupTimeout = setTimeout(showPopup, 60000);
+  }
+}
+
+// Close button logic (reopen after 60s)
+function closeByButton() {
+  closePopup(true);
+}
+
+// Login success → never show again
+function handleLogin() {
+  const user = username.value.trim();
+  const pass = password.value.trim();
+
+  if (user && pass) {
+    loggedIn = true;
+    closePopup(false);
+  } else {
+    alert("Enter username & password");
+  }
+}
+
