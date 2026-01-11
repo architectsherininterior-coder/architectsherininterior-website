@@ -2785,7 +2785,7 @@ section,
   text-align: right;
   position: relative;
   z-index: 20;
-}
+} 
 
 .main-banner .right-image img {
   max-width: 700px;
@@ -2799,10 +2799,11 @@ section,
 }
 
 .main-banner .item h2 {
-  font-size: 47px;
+  font-size: 38px;
   font-weight: 700;
   color: #2a2a2a;
-  line-height: 60px;
+  line-height: 53px;
+
 }
 
 .main-banner .item h2 em {
