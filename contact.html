@@ -327,10 +327,11 @@ Contact Area
 
                         <!-- Netlify Form Start -->
                         <form name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field"
-class="contact-form2 style2" data-popup="contact">
+                            class="contact-form2 style2" data-popup="contact">
 
                             <!-- Required Hidden Field -->
                             <input type="hidden" name="form-name" value="contact">
+                            <input type="hidden" name="redirect" value="">
 
                             <!-- Spam Protection -->
                             <p style="display:none">
@@ -473,7 +474,7 @@ class="contact-form2 style2" data-popup="contact">
                                     data-popup="newsletter">
 
                                     <input type="hidden" name="form-name" value="newsletter">
-
+                                    <input type="hidden" name="redirect" value="">
                                     <input class="form-control" type="email" name="email" placeholder="Email Address"
                                         required>
 
@@ -641,7 +642,7 @@ class="contact-form2 style2" data-popup="contact">
         <textarea name="message"></textarea>
     </form>
 
-   <form name="newsletter" method="POST" data-netlify="true" hidden>
+    <form name="newsletter" method="POST" data-netlify="true" hidden>
         <input type="email" name="email">
     </form>
 </body>
