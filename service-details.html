@@ -465,20 +465,21 @@
                                         Subscribe to our Newsletter and receive updates via email about Sherin Interior
                                         Company.
                                     </p>
-                                    <form name="newsletter" method="POST" data-netlify="true"
-                                        class="footer-search-form">
+                                     <form name="newsletter" method="POST" data-netlify="true" class="footer-search-form"
+                                    data-popup="newsletter">
 
-                                        <input type="hidden" name="form-name" value="newsletter">
+                                    <input type="hidden" name="form-name" value="newsletter">
+                                    <input type="hidden" name="redirect" value="">
+                                    <input class="form-control" type="email" name="email" placeholder="Email Address"
+                                        required>
 
-                                        <input class="form-control" type="email" name="email"
-                                            placeholder="Email Address" required>
+                                    <div class="footer-btn mt-10">
+                                        <button type="submit" class="th-btn style1 btn-fw">
+                                            Subscribe Now
+                                        </button>
+                                    </div>
 
-                                        <div class="footer-btn mt-10">
-                                            <button type="submit" class="th-btn style1 btn-fw">
-                                                Subscribe Now
-                                            </button>
-                                        </div>
-                                    </form>
+                                </form>
                                 </div>
                             </div>
                         </div>
@@ -532,10 +533,10 @@
         </div>
     </div>
 
-    <script>
+     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            const forms = document.querySelectorAll("form[data-netlify='true']");
+            const forms = document.querySelectorAll("form[data-popup]");
 
             forms.forEach(function (form) {
 
@@ -554,8 +555,6 @@
 
                             let title = "Success!";
                             let message = "Your request has been submitted.";
-
-                            /* Detect form type */
 
                             if (form.getAttribute("name") === "contact") {
                                 title = "Thank You for Your Enquiry!";
@@ -585,8 +584,7 @@
 
             });
 
-        });
-    </script>
+        }); </script>
 
     <!--==============================
     All Js File
