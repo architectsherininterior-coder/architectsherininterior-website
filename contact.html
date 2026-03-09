@@ -548,7 +548,7 @@ Contact Area
 
                     const formData = new FormData(form);
 
-                    fetch(form.action || "/", {
+                    fetch("/", {
                         method: "POST",
                         headers: { "Content-Type": "application/x-www-form-urlencoded" },
                         body: new URLSearchParams([...formData]).toString()
@@ -623,7 +623,21 @@ Contact Area
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+<!-- Netlify Hidden Forms for Detection -->
+<div hidden>
 
+<form name="contact" method="POST" data-netlify="true">
+<input type="text" name="name">
+<input type="email" name="email">
+<input type="text" name="phone">
+<textarea name="message"></textarea>
+</form>
+
+<form name="newsletter" method="POST" data-netlify="true">
+<input type="email" name="email">
+</form>
+
+</div>
 </body>
 
 </html>
