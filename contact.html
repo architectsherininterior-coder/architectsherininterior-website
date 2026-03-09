@@ -468,7 +468,8 @@ Contact Area
                                     Company.
                                 </p>
 
-                                <form name="newsletter" method="POST" data-netlify="true" class="footer-search-form" data-popup="newsletter">
+                                <form name="newsletter" method="POST" data-netlify="true" class="footer-search-form"
+                                    data-popup="newsletter">
 
                                     <input type="hidden" name="form-name" value="newsletter">
 
@@ -628,7 +629,20 @@ Contact Area
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <!-- Netlify Hidden Form for Build Detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name">
+        <input type="email" name="email">
+        <input type="tel" name="phone">
+        <select name="subject">
+            <option>Construction</option>
+        </select>
+        <textarea name="message"></textarea>
+    </form>
 
+    <form name="newsletter" netlify hidden>
+        <input type="email" name="email">
+    </form>
 </body>
 
 </html>
