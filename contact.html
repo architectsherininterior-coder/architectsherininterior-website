@@ -544,7 +544,7 @@ Contact Area
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            const forms = document.querySelectorAll("form[data-netlify='true']");
+            const forms = document.querySelectorAll("form[data-popup]");
 
             forms.forEach(function (form) {
 
@@ -563,8 +563,6 @@ Contact Area
 
                             let title = "Success!";
                             let message = "Your request has been submitted.";
-
-                            /* Detect form type */
 
                             if (form.getAttribute("name") === "contact") {
                                 title = "Thank You for Your Enquiry!";
@@ -594,8 +592,7 @@ Contact Area
 
             });
 
-        });
-    </script>
+        }); </script>
     <!--==============================
     All Js File
 ============================== -->
