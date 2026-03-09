@@ -27044,3 +27044,37 @@ body.popup-active {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.success-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:99999;
+}
+
+.popup-box{
+background:#fff;
+padding:40px;
+border-radius:10px;
+text-align:center;
+max-width:350px;
+width:90%;
+animation:popupScale .3s ease;
+}
+
+.popup-icon{
+font-size:40px;
+color:#28a745;
+margin-bottom:10px;
+}
+
+@keyframes popupScale{
+from{transform:scale(.7);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}

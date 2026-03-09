@@ -538,6 +538,8 @@ Contact Area
 </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", function(){
+
 const form = document.querySelector("form[name='contact']");
 
 form.addEventListener("submit", function(e){
@@ -562,6 +564,9 @@ document.getElementById("successPopup").style.display="none";
 
 })
 .catch((error) => alert("Form submission failed"));
+
+});
+
 });
 </script>
     <!--==============================
