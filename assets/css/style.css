@@ -27078,3 +27078,38 @@ margin-bottom:10px;
 from{transform:scale(.7);opacity:0;}
 to{transform:scale(1);opacity:1;}
 }
+
+.success-checkmark svg{
+width:60px;
+height:60px;
+display:block;
+margin:0 auto 15px;
+}
+
+.checkmark-circle{
+stroke:#28a745;
+stroke-width:3;
+stroke-dasharray:166;
+stroke-dashoffset:166;
+animation:strokeCircle 0.6s forwards;
+}
+
+.checkmark-check{
+stroke:#28a745;
+stroke-width:3;
+stroke-dasharray:48;
+stroke-dashoffset:48;
+animation:strokeCheck 0.4s 0.6s forwards;
+}
+
+@keyframes strokeCircle{
+to{
+stroke-dashoffset:0;
+}
+}
+
+@keyframes strokeCheck{
+to{
+stroke-dashoffset:0;
+}
+}
