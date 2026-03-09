@@ -287,8 +287,9 @@ Contact Area
                             <div class="media-body">
                                 <p class="contact-info_label">Contact Number</p>
                                 <a href="tel:256214203215" class="contact-info_link">Mobile: +91 70101 85202</a>
-                                <a href="mailto:info@konta.com" class="contact-info_link">Email:
-                                    interiorsherin@gmail.com</a>
+                                <a href="mailto:interiorsherin@gmail.com" class="contact-info_link">
+                                    Email: interiorsherin@gmail.com
+                                </a>
                             </div>
                         </div>
                         <div class="contact-info">
@@ -630,7 +631,7 @@ Contact Area
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
     <!-- Netlify Hidden Form for Build Detection -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <form name="contact" method="POST" netlify netlify-honeypot="bot-field" hidden>
         <input type="text" name="name">
         <input type="email" name="email">
         <input type="tel" name="phone">
@@ -640,7 +641,7 @@ Contact Area
         <textarea name="message"></textarea>
     </form>
 
-    <form name="newsletter" netlify hidden>
+    <form name="newsletter" method="POST" netlify hidden>
         <input type="email" name="email">
     </form>
 </body>
