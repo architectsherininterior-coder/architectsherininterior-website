@@ -1336,7 +1336,7 @@ textarea.is-invalid {
   font-size: 22px;
   position: absolute;
   right: -16.5px;
-  top: 25px;
+  top: 15px;
   padding: 0;
   line-height: 1;
   width: 33px;
@@ -7103,7 +7103,7 @@ ol.wp-block-rss {
   top: 0;
   left: -3.2%;
   width: 330px;
-  height: 100.5px;
+  height: 100%;
   background-color: #efe9db50;
   z-index: -1;
   /* Extra small devices */
@@ -25255,7 +25255,13 @@ span.select2-selection.select2-selection--single:focus {
 
 @media (max-width: 425px) {
   .cta-group .th-btn:first-child {
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
+  }
+  .cta-group .th-btn{
+    display: block;
+        width: fit-content;
+        margin:0 auto;
+        text-align: center;
   }
 }
 
@@ -26956,6 +26962,26 @@ body.popup-active {
   text-align: center;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
   animation: slideUp 0.5s ease;
+
+}
+.pad_20{
+  padding: 32px;
+}
+@media (max-width: 768px) {
+.loginPopup  {
+width: 85% !important;
+}
+.pad_20{
+  padding: 24px !important;
+}
+.hide_column{
+  display: none !important;
+}
+}
+
+@media (max-width: 1199px) {
+ .loginPopup  {
+  }
 }
 
 .closeBtn {
@@ -26977,6 +27003,7 @@ body.popup-active {
 .loginPopup h2 {
   margin-bottom: 6px;
   font-size: 26px;
+  line-height: 1.1;
 }
 
 .subtitle {

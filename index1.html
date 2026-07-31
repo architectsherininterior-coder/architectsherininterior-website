@@ -2299,10 +2299,10 @@ Counter Area
         <div id="loginOverlay">
             <div class="loginPopup">
                 <div class="row mx-0">
-                    <div class="col-lg-6 col-12 text-center ps-0">
+                    <div class="col-lg-6 col-12 text-center ps-0 hide_column">
                         <img src="assets/img/project/121.jpg" alt="Logo" class="popup_image">
                     </div>
-                    <div class="col-lg-6 col-12 py-5 px-5">
+                    <div class="col-lg-6 col-12 pad_20">
                         <button class="closeBtn" id="closeBtn" onclick="closeByButton()">×</button>
                         <div class="d-flex justify-content-center align-items-center flex-column h-100">
                             <h2>Get a Free Design Consultation</h2>
@@ -2505,19 +2505,19 @@ Counter Area
                 closePopup(true);
             }
             // Login success → never show again
-            // function handlogin() {
-            //     const user = username.value.trim();
-            //     const pass = password.value.trim();
-            //     if (user && pass) {
-            //         loggedIn = true;
-            //         closePopup(false);
-            //     } else {
-            //         alert("Enter username & password");
-            //     }
-            // }
             function handlogin() {
-                closePopup(true);
+                const user = username.value.trim();
+                const pass = password.value.trim();
+                if (user && pass) {
+                    loggedIn = true;
+                    closePopup(false);
+                } else {
+                    alert("Enter username & password");
+                }
             }
+            // function handlogin() {
+            //     closePopup(true);
+            // }
         </script>
 </body>
 
