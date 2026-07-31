@@ -7328,8 +7328,8 @@ ol.wp-block-rss {
 }
 
 .header-layout3 .sticky-wrapper.sticky .header-logo {
-  padding-top: 14px;
-  padding-bottom: 0px;
+  padding: 8px 0px;
+  /* padding-bottom: 0px; */
 }
 
 .header-layout3 .sticky-wrapper.sticky .menu-area:before {
@@ -7340,7 +7340,7 @@ ol.wp-block-rss {
 
 @media (max-width: 991px) {
   .header-layout3 .sticky-wrapper.sticky .menu-area:before {
-    height: 73px;
+    height: 100%;
   }
 }
 
